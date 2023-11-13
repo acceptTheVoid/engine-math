@@ -160,7 +160,7 @@ pub(crate) mod transform_matrix {
         aspect_ratio: f32,
         fov: f32,
     ) -> Matrix4 {
-        let f = (PI * 0.5 - 0.5 * fov).tan();
+        let f = (PI * 0.5 - 0.5 * fov);
         let range_inverse = 1. / (z_near - z_far);
         Matrix4::new([
             [f / (aspect_ratio), 0., 0., 0.],

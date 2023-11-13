@@ -29,7 +29,7 @@ pub trait Vector {
         Self: From<<Self as Div<f32>>::Output>,
     {
         let len = self.len();
-        if len == 0. {
+        if len < EPSILON {
             return None;
         }
         Some((self.clone() / len).into())

@@ -8,6 +8,7 @@ use std::{
     ops::{Add, AddAssign, Div, DivAssign, Index, IndexMut, Mul, MulAssign, Neg, Sub, SubAssign},
 };
 
+#[repr(C)]
 #[derive(Default, Debug, Clone, Copy)]
 pub struct Matrix2 {
     data: [[f32; 2]; 2],
